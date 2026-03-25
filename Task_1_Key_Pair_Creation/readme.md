@@ -43,7 +43,8 @@ resource "local_file" "private_key_pem" {
   file_permission = "0600"
 }
 ```
-
+Terraform cannot natively create a key pair in the proprietary .ppk format because it expects standard OpenSSH formats (i.e., PEM File).
+The .ppk (PuTTY Private Key) format is specific to the PuTTY utility on Windows and is not a standard, portable key format for most Infrastructure Automation Tools.
 
 # Register Key Pair in AWS Account :
   Register the Key Pair in the AWS Account, also mention the name of the Key Pair.
