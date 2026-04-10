@@ -1,5 +1,15 @@
 
 
+# Task Description :
+In the default VPC, create a Security Group with the below Protocol Rules :
+
+1. The name of the Security Group must be datacenter-sg.
+2. The description must be "Secuirty Group for App Server."
+3. Inbound Rule of type HTTP, with a Port Range of 80, and source CIDR Range 0.0.0.0/0
+4. Inbound Rule of type SSH, with a Port Range of 80, and source CIDR Range 0.0.0.0/0
+5. AWS Region : Asia Pacific (Mumbai) Region
+
+
 # Provider :
   Specify the Infra Provider AWS.
 ```
@@ -17,7 +27,7 @@ terraform {
 ```
 provider "aws" {
   # Configuration Options
-  region = "us-east-1"
+  region = "ap-south-1"
 }
 ```
 # Create Security Group :
